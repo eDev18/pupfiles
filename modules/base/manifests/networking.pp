@@ -1,5 +1,4 @@
 class base::networking {
-	include base::networking::tor
 	package {'dnsutils':} # dig
 	package {'net-tools':} # netstat
 	package {'openbsd-netcat':} # netcat
