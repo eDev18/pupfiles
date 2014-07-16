@@ -5,10 +5,10 @@ if [ "$EUID" -ne 0 ]; then
 	exit 1
 fi
 
-pupUrl=git://perot.me/pupfiles
+pupUrl=https://github.com/Indiv0/pupfiles
 pupDir=/var/lib/pupfiles
-pupPrivateUrlInitial=git://perot.me/pupfiles-private
-pupPrivateUrlActual=git@perot.me:pupfiles-private
+pupPrivateUrlInitial=https://github.com/Indiv0/pupfiles-private
+pupPrivateUrlActual=git@github.com:Indiv0/pupfiles-private
 
 scriptDir=$(dirname "$BASH_SOURCE")
 scriptDir=$(cd "$scriptDir" && pwd)
