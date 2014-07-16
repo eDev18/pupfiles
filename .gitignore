@@ -4,3 +4,10 @@ encrypted-private
 private.key
 .directory
 *.gen.pp
+
+# Vim
+*.swp
+
+# Vagrant
+.vagrant/
+
