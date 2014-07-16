@@ -1,4 +1,4 @@
-class { 'base::indiv0': }
+class { 'base::etienne': }
 
 class { 'console': }
 
