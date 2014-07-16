@@ -5,6 +5,8 @@ if [ "$EUID" -ne 0 ]; then
 	exit 1
 fi
 
+version=v1.0.0
+
 pupUrl=https://github.com/Indiv0/pupfiles
 pupDir=/var/lib/pupfiles
 pupPrivateUrlInitial=https://github.com/Indiv0/pupfiles-private
@@ -20,24 +22,35 @@ if [ -n "$PUP_JUST_SET_VARIABLES" ]; then
 	return
 fi
 
+echo "Welcome to the pupfiles install script $version!"
+
 setterm -blength 0
 
+echo "Ensuring puppet is available"
 if ! pacman -Q puppet &> /dev/null; then
+	echo "==> Ensuring [archlinuxfr] repo is available"
 	if ! grep -iP '^\[archlinuxfr\]$' /etc/pacman.conf &> /dev/null; then
+		echo "==>==> Installing [archlinuxfr] repo to 
+/etc/pacman.conf"
 		echo >> /etc/pacman.conf # Empty line
 		echo '[archlinuxfr]' >> /etc/pacman.conf
 		echo 'Server = http://repo.archlinux.fr/$arch' >> /etc/pacman.conf
 		echo 'SigLevel = Optional' >> /etc/pacman.conf
 	fi
+	echo "==> Ensuring yaourt is available"
 	if ! pacman -Q yaourt &> /dev/null; then
+		echo "==>==> Installing yaourt"
 		pacman -Sy --noconfirm yaourt || exit 1
 	fi
+	echo "==> Installing puppet"
 	yaourt -Sya --noconfirm puppet || exit 1
 fi
 getpackages() {
 	for package; do
+		echo "Ensuring we have $package"
 		if ! puppet resource package "$package" ensure=installed &> /dev/null; then
-			echo "Puppet failed to make sure we have $package." >&2
+			echo "Puppet failed to make sure we have 
+$package." >&2
 			exit 1
 		fi
 	done
@@ -69,16 +82,12 @@ fi
 if [ ! -d encrypted-private ]; then
 	fullPrivateCheckout='true'
 	while [ -n "$fullPrivateCheckout" ]; do
-		echo 'Open the floodgates and press Enter.'
-		read
 		if git clone --recursive "$pupPrivateUrlInitial" encrypted-private; then
 			fullPrivateCheckout=''
 			cd encrypted-private
 			git remote set-url origin "$pupPrivateUrlActual"
 			cd ..
 			chmod -R g-rwx,o-rwx encrypted-private
-			echo 'Close the floodgates and press Enter.'
-			read
 		else
 			rm -rf encrypted-private
 		fi
