@@ -97,7 +97,7 @@ mkdir -p private
 decryptionKey=''
 if [ ! -f private.key ]; then
 	echo -n 'Enter decryption key: '
-	read decryptionKey
+	read -s decryptionKey
 	echo "$decryptionKey" > private.key
 fi
 while IFS= read -d $'\0' -r encryptedFile; do
