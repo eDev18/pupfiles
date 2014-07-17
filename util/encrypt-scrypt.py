@@ -6,8 +6,8 @@
 import sys, hashlib, scrypt
 
 if len(sys.argv) != 5:
-	sys.stderr.write('Wrong usage.\n')
-	sys.exit(1)
+    sys.stderr.write('Wrong usage.\n')
+    sys.exit(1)
 
 # Could use a proper key derivation function here, but it's redundant because
 # scrypt does its own key derivation. One might argue that this makes the

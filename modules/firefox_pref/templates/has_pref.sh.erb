@@ -5,11 +5,11 @@
 # For some reason, "if ! grep" wasn't properly branching.
 grep -E "$existsPattern" "$prefsJs" &> /dev/null
 if [ "$?" -ne 0 ]; then
-	if [ "$isDefault" == true ]; then
-		exit 1 # Change to 0 if default prefs shouldn't be written
-	else
-		exit 1
-	fi
+    if [ "$isDefault" == true ]; then
+        exit 1 # Change to 0 if default prefs shouldn't be written
+    else
+        exit 1
+    fi
 fi
 
 matchingLine=$(grep -E "$existsPattern" "$prefsJs")
@@ -18,7 +18,7 @@ matchingPartSize="${#matchingPart}"
 currentPrefValue=$(echo "${matchingLine:$matchingPartSize}" | sed -r 's/["'"'"']?\s*\)\s*;?\s*$//' | sed -r 's/^\s*["'"'"']?//')
 
 if [ "$currentPrefValue" != "$prefValue" ]; then
-	exit 1
+    exit 1
 else
-	exit 0
+    exit 0
 fi

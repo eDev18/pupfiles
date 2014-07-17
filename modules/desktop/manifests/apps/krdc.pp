@@ -1,3 +1,3 @@
 class desktop::apps::krdc {
-	package {'kdenetwork-krdc':}
+    package {'kdenetwork-krdc':}
 }

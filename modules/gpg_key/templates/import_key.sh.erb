@@ -5,7 +5,7 @@
 echo "$1" | gpg --batch --import &> /dev/null
 returnCode="$?"
 if [ "$returnCode" -ne 0 ]; then
-	exit "$returnCode"
+    exit "$returnCode"
 fi
 echo "$fingerprint:6:" | gpg --batch --import-ownertrust &> /dev/null
 exit "$?"

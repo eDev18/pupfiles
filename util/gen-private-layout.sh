@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 ignoredPatterns=(
-	'private/modules/private/templates/console/gpg/*.asc'
-	'private/modules/private/files/desktop/wallpapers/*'
-	'private/modules/private/templates/desktop/apps/kmail2/*'
-	'private/modules/private/files/base/networking/tunnels/*.yml'
+    'private/modules/private/templates/console/gpg/*.asc'
+    'private/modules/private/files/desktop/wallpapers/*'
+    'private/modules/private/templates/desktop/apps/kmail2/*'
+    'private/modules/private/files/base/networking/tunnels/*.yml'
 )
 
 scriptDir=$(dirname "$BASH_SOURCE")
@@ -12,8 +12,8 @@ cd "$scriptDir/.."
 findArguments=()
 layoutExtra=''
 for pattern in "${ignoredPatterns[@]}"; do
-	findArguments+=(-path "$pattern" -prune -o)
-	layoutExtra="$layoutExtra
+    findArguments+=(-path "$pattern" -prune -o)
+    layoutExtra="$layoutExtra
 $pattern"
 done
 layout=$(find private "${findArguments[@]}" -type f -print)

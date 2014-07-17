@@ -1,3 +1,3 @@
 class desktop::environment::kde::kpartsplugin {
-	package {'kpartsplugin':}
+    package {'kpartsplugin':}
 }

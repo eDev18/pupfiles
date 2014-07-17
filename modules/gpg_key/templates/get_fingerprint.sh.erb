@@ -8,5 +8,5 @@ fingerprint=$(gpg --homedir="$tmpDir" --batch --with-colons --list-secret-keys -
 returnCode2="$?"
 rm -rf "$tmpDir"
 if [ "$returnCode1" -ne 0 -o "$returnCode2" -ne 0 ]; then
-	exit 1
+    exit 1
 fi

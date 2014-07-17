@@ -3,7 +3,7 @@
 set -e
 
 if [ "$#" -eq 0 ]; then
-	sleep $[(($RANDOM*$RANDOM)%<%= @cron_randomdelay %>)+1]
+    sleep $[(($RANDOM*$RANDOM)%<%= @cron_randomdelay %>)+1]
 fi
 
 cd '<%= @maildir %>'
@@ -13,7 +13,7 @@ stubDir="$stubDir/$stubDirExtension"
 mkdir -p "$stubDir"
 chmod 700 "$stubDir"
 while IFS= read -d $'\0' -r dir; do
-	mkdir -p "$stubDir/$dir"
+    mkdir -p "$stubDir/$dir"
 done < <(find -type d -print0)
 echo "[retriever]
 type = SimplePOP3SSLRetriever
@@ -29,7 +29,7 @@ arguments = (\"--rcfile=$stubDir/.maidag.tmp\", \"--from\", \"%(sender)\", \"-s\
 [options]
 delete = true" > "$stubDir/.getmailrc.tmp"
 echo "mailbox {
-	mailbox-pattern \"maildir://$stubDir/<%= @inbox_folder %>\";
+    mailbox-pattern \"maildir://$stubDir/<%= @inbox_folder %>\";
 }" > "$stubDir/.maidag.tmp"
 # Stupid lack of lookaheads
 cat '<%= @maildir %>/.sieve' | sed -r "s#fileinto \"([^m]|m[^a]|ma[^i]|mai[^l]|mail[^d]|maild[^i]|maildi[^r]|maildir[^:]|maildir:[^/]|maildir:/[^/])#fileinto \"maildir://$stubDir/.<%= @inbox_folder %>.directory/\\1#gi" > "$stubDir/.sieve"
