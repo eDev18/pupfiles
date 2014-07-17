@@ -3,7 +3,7 @@ define aur_package (
 ) {
     require aur_package::yaourt
     package { $title:
-        name   => "$name",
+        name   => "${name}",
         ensure => $ensure,
     }
 }

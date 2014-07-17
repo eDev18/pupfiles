@@ -11,5 +11,5 @@ class { 'desktop':
 network_interface { $ethernet_macaddress:
     rename       => 'wired0',
     macspoof     => false, # Desktop machine, not much risk
-    ipv6_privacy => true
+    ipv6_privacy => true,
 }
