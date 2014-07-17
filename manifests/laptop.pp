@@ -19,7 +19,3 @@ network_interface { $wifi_macaddress:
     ipv6_privacy => true,
 }
 
-class { 'synergy::client':
-    server => 'Blorb2.local',
-}
-

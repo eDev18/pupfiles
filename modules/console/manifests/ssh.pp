@@ -1,9 +1,10 @@
 class console::ssh {
-    package { 'autossh': }
-    enduser_file { '.ssh':
+    package {'autossh':}
+    enduser_file {'.ssh':
         ensure => directory
     }
-    enduser_file { '.ssh/config':
+    enduser_file {'.ssh/config':
         content => template('console/ssh/config.erb')
     }
 }
+

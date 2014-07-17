@@ -10,3 +10,6 @@
 [submodule "modules/desktop/files/xorg/xcompose"]
 	path = modules/desktop/files/xorg/xcompose
 	url = https://github.com/kragen/xcompose.git
+[submodule "modules/console/files/zsh/.zsh/base16-shell"]
+	path = modules/console/files/zsh/.zsh/base16-shell
+	url = git@github.com:chriskempson/base16-shell.git

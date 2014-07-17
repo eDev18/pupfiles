@@ -14,7 +14,3 @@ network_interface { $ethernet_macaddress:
     ipv6_privacy => true
 }
 
-class { 'synergy::server':
-    config => template('private/synergy/blorb2.synergy.conf'),
-}
-

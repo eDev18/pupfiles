@@ -1,4 +1,5 @@
 class base::python {
-	package {'python':}
-	package {'python2':}
+    package {'python':}
+    package {'python2':}
 }
+

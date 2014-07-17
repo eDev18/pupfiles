@@ -1,6 +1,5 @@
 class desktop::apps {
 	include desktop::apps::redshift
-	include desktop::apps::kmail2
 	include desktop::apps::ark
 	include desktop::apps::filelight
 	include desktop::apps::gwenview
@@ -19,6 +18,5 @@ class desktop::apps {
 	include desktop::apps::okteta
 	include desktop::apps::okular
 	include desktop::apps::yakuake
-	include desktop::apps::keepassx
 	include desktop::apps::konsole
 }
