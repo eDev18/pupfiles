@@ -2,7 +2,7 @@ class base::mkinitcpio {
     exec { 'mkinitcpio':
         command => shellquote(
             '/usr/bin/env', 'mkinitcpio',
-            '-p', 'linux'm
+            '-p', 'linux'
         ),
         refreshonly => true,
     }
