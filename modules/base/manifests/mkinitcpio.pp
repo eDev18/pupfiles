@@ -7,4 +7,3 @@ class base::mkinitcpio {
         refreshonly => true,
     }
 }
-

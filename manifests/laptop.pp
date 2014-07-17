@@ -18,4 +18,3 @@ network_interface { $wifi_macaddress:
     macspoof     => [ 'wireless_laptop', 'wireless_usb', ],
     ipv6_privacy => true,
 }
-

@@ -16,4 +16,3 @@ class base::packaging {
         require => File['/etc/pacman.d/pupfiles-options.conf'],
     }
 }
-

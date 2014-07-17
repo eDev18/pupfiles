@@ -12,4 +12,3 @@ class console::git {
         require => Package['git'],
     }
 }
-

@@ -11,4 +11,3 @@ class base::networking {
     package {'tcpdump':}
     include private::base::networking::hosts
 }
-

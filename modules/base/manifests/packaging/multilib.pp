@@ -4,4 +4,3 @@ class base::packaging::multilib {
         siglevel   => 'PackageRequired',
     }
 }
-

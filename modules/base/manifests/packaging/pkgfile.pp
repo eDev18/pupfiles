@@ -13,4 +13,3 @@ class base::packaging::pkgfile {
         require => Package['pkgfile'],
     }
 }
-

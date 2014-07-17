@@ -25,4 +25,3 @@ class base::indiv0 {
         group  => 'users',
     }
 }
-

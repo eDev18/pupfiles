@@ -30,4 +30,3 @@ class console::oh_my_zsh {
         content => "source /etc/zsh/zprofile\n"
     }
 }
-

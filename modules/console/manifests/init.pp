@@ -5,4 +5,3 @@ class console (
     include console::shutils
     include console::oh_my_zsh
 }
-

@@ -20,4 +20,3 @@ class base::root {
         group  => 'root',
     }
 }
-

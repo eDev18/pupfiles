@@ -13,4 +13,3 @@ network_interface { $ethernet_macaddress:
     macspoof     => false, # Desktop machine, not much risk
     ipv6_privacy => true
 }
-

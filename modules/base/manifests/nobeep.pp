@@ -4,4 +4,3 @@ class base::nobeep {
         content => 'blacklist pcspkr'
     }
 }
-

@@ -7,4 +7,3 @@ class console::ssh {
         content => template('console/ssh/config.erb')
     }
 }
-

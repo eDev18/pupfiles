@@ -13,4 +13,3 @@ class base::systemd {
     systemd_service {'systemd-readahead-collect':}
     systemd_service {'systemd-readahead-replay':}
 }
-

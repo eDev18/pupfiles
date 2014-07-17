@@ -7,4 +7,3 @@ define aur_package (
         ensure => $ensure,
     }
 }
-

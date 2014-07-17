@@ -1,2 +1,1 @@
 source "$HOME/.zsh/zshrc"
-

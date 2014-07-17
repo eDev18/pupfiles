@@ -4,4 +4,3 @@ class base::packaging::archlinuxfr {
         siglevel => 'Optional',
     }
 }
-

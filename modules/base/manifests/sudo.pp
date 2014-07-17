@@ -14,4 +14,3 @@ class base::sudo {
         mode    => 0440, # Important, otherwise sudo will die completely
     }
 }
-
