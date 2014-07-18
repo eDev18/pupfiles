@@ -14,4 +14,8 @@ class desktop::graphics::nvidia {
         source  => 'puppet:///modules/desktop/graphics/nvidia/20-nvidia.conf',
         require => Class['desktop::xorg'],
     }
+    file { '/etc/X11/edid-shimian.bin':
+        source  => 'puppet:///modules/desktop/graphics/edid-shimian.bin',
+        require => Class['desktop::xorg'],
+    }
 }
