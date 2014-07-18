@@ -1,2 +1,4 @@
 redshift
+mariadb
+Xresources
 

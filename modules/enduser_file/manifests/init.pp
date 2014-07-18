@@ -12,7 +12,7 @@ define enduser_file (
 ) {
     enduser_file::single {"/home/indiv0/$name":
         filename => $filename,
-        owner => 'etienne',
+        owner => 'indiv0',
         group => 'users',
         ensure => $ensure,
         mode => $mode,
