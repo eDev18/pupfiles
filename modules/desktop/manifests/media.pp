@@ -1,9 +1,10 @@
 class desktop::media {
-    package {'vlc':}
-    package {'ffmpeg':}
+    package { 'vlc': }
+    package { 'ffmpeg': }
     include desktop::media::mplayer
-    package {'mencoder':}
-    package {'handbrake-cli':}
-    package {'handbrake':}
-    aur_package {'pavucontrol':}
+    package { 'mencoder': }
+    package { 'handbrake-cli': }
+    package { 'handbrake': }
+    package { 'pulseaudio': }
+    aur_package { 'pavucontrol': }
 }
