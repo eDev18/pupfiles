@@ -1,6 +1,11 @@
 class base (
-    $networking = true
+    $grub_resolution = 'auto',
+    $networking      = true,
 ) {
+    class { 'base::grub':
+        grub_resolution => $grub_resolution,
+    }
+    include base::grub
     include base::root
     include base::nobeep
     include base::packaging
