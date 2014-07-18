@@ -1,6 +1,5 @@
 class desktop::media::mplayer {
     package {'mplayer':}
-    package {'smplayer':}
     enduser_file {'.mplayer':
         ensure => directory
     }

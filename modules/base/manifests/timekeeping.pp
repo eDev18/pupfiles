@@ -1,11 +1,7 @@
 class base::timekeeping {
-    require certs
-    aur_package {'tlsdate':}
-    systemd_service { 'tlsdate':
+    package { 'ntp': }
+    service { 'ntpd':
         enable  => true,
-        require => Aur_package['tlsdate'],
-    }
-    systemd_service { 'ntpd':
-        enable => false,
+        require => Package[ 'ntp' ],
     }
 }

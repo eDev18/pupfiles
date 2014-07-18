@@ -3,12 +3,12 @@ class base::packaging::pkgfile {
     exec { 'pkgfile --update':
         command => shellquote(
             '/usr/bin/env',
-            'pkgfile', '--update',
+            'pkgfile', '--update'
         ),
         unless => shellquote(
             '/usr/bin/env',
             'test', '-d',
-            '/var/cache/pkgfile',
+            '/var/cache/pkgfile'
         ),
         require => Package['pkgfile'],
     }

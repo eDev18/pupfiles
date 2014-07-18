@@ -1,4 +1,4 @@
-class console (
+class console {
     include console::ssh
     include console::screen
     include console::git

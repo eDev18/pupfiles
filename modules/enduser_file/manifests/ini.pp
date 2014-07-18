@@ -11,8 +11,8 @@ define enduser_file::ini (
             mode => $mode
         }
     }
-    ini_setting {"/home/etienne/$filename/$section/$setting":
-        path => "/home/etienne/$filename",
+    ini_setting {"/home/indiv0/$filename/$section/$setting":
+        path => "/home/indiv0/$filename",
         section => $section,
         setting => $setting,
         value => $value,

@@ -4,7 +4,6 @@ class base::networking {
     package {'openbsd-netcat':} # netcat
     package {'iputils':} # ping
     package {'traceroute':}
-    #aur_package {'tcptraceroute':}
     package {'openssh':}
     package {'rsync':}
     package {'nmap':}
