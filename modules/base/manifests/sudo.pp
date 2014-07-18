@@ -3,7 +3,7 @@ class base::sudo {
     group {'wheel':}
     file { '/etc/sudoers.d/allow-wheel':
         ensure  => present,
-        content => '%wheel ALL=(ALL): ALL',
+        content => '%wheel ALL=(ALL) ALL',
         require => Package['sudo'],
         mode    => 0440,
     }
