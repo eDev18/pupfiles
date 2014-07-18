@@ -1,4 +1,7 @@
 class desktop::wm {
-    aur_package { 'bspwm': }
-    aur_package { 'sxhkd': }
+    enduser_file {'.config':
+        ensure => directory
+    }
+    include desktop::wm::bspwm
+    include desktop::wm::sxhkd
 }
