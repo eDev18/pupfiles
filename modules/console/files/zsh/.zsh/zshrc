@@ -1,4 +1,6 @@
 # zsh configuration file
+# Start X, if not already started on first tty.
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
 
 # Set ZSHC to the current directory.
 ZSHC="$(dirname "${BASH_SOURCE:-$0}")"

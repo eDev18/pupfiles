@@ -11,6 +11,13 @@ class console::oh_my_zsh {
             Enduser_file['.zsh']                    # Parent directory
         ]
     }
+    enduser_file {'.zprofile':
+        source => 'console/zsh',
+        require => [
+            Package['zsh'],                         # Actual shell
+            Enduser_file['.zsh']                    # Parent directory
+        ]
+    }
     enduser_file {'.zsh':
         ensure  => directory,
         source  => 'console/zsh',
