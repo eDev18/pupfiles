@@ -8,6 +8,7 @@ class desktop (
     $games = true,
 ) {
     include desktop::xorg
+    include desktop::wm
     case $graphics_drivers {
         'nvidia': {
             include desktop::graphics::nvidia
