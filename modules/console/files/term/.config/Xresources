@@ -1,0 +1,32 @@
+! font settings -----------------------------------------
+
+Xft.autohint: 0
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+
+*font: xft:Meslo LG S for Powerline:size=9
+
+!URxvt*font:xft:Inconsolata-dz for Powerline:size=10
+
+!URxvt*font:xft:Terminess\\ Powerline:size=10
+!URxvt*boldFont:xft:Terminess\\ Powerline:bold:size=10
+
+URxvt*cursorBlink: true
+
+URxvt*jumpScroll: true
+URxvt*scrollBar: false
+
+URxvt*perl-ext: default,url-select
+URxvt*perl-ext-common: vtwheel
+URxvt*keysym*M-u: perl:url-select:select_next
+URxvt*url-select.launcher: /usr/bin/firefox -new-tab
+URxvt*url-select.underline: true
+
+URxvt*termName: rxvt-unicode-256color
+URxvt*depth: 32
+
+URxvt*intensityStyles: false
+
+! vim: ft=xdefaults

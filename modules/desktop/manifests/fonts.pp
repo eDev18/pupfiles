@@ -1,10 +1,13 @@
 class desktop::fonts {
-    package {'ttf-liberation':}
     package {'ttf-opensans':}
-    package {'terminess-powerline-font':}
     package {'ttf-lato':}
+    package {'terminess-powerline-font':}
     package {'urw-garamond':}
     package {'texlive-fontsextra':}
 
-    # TODO: Install patched powerline fonts here.
+    enduser_file { '.fonts':
+        ensure  => directory,
+        source  => 'desktop/fonts',
+        recurse => true,
+    }
 }
