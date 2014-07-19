@@ -2,6 +2,7 @@ class base::indiv0 {
     include base
     include base::systemd
     include console::zsh
+    include development
     user { 'indiv0':
         home       => '/home/indiv0',
         managehome => true,

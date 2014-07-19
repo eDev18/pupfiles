@@ -13,4 +13,6 @@ class desktop::apps {
     package{'scrot':} 
     package{'skype':} 
     package{'tty-clock':}
+    package{'unzip':}
+    package{'zip':}
 }
