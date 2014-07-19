@@ -6,6 +6,7 @@ class desktop (
     $fonts = true,
     $media = true,
     $games = true,
+    $tex = true,
 ) {
     include desktop::xorg
     include desktop::wm
@@ -28,5 +29,8 @@ class desktop (
     }
     if $games {
         include desktop::games
+    }
+    if $tex {
+        include desktop::tex
     }
 }

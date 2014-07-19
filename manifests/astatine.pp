@@ -9,4 +9,5 @@ class { 'console': }
 class { 'desktop':
     laptop           => true,
     graphics_drivers => 'intel',
+    tex              => true,
 }
