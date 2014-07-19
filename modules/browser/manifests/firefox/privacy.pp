@@ -28,7 +28,7 @@ class browser::firefox::privacy {
         value => false
     }
     firefox_pref { 'dom.storage.enabled':
-        value => false
+        value => true
     }
     firefox_pref { 'browser.cache.offline.capacity':
         value => 0
