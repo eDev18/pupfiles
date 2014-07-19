@@ -6,6 +6,7 @@ class desktop::apps {
     include desktop::apps::tex
 
     package{'archey':}
+    package{'cmatrix':}
     package{'evince':}
     package{'gimp':}
     package{'skype':} 
