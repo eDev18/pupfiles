@@ -1,4 +1,5 @@
 vo=vdpau,gl:yuv=2:force-pbo:ati-hack,xv
+vc=ffmpeg12vdpau,ffwmv3vdpau,ffvc1vdpau,ffh264vdpau,ffodivxvdpau
 double=1
 autoq=100
 ao=alsa

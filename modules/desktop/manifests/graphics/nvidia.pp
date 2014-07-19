@@ -1,6 +1,7 @@
 class desktop::graphics::nvidia {
     package {'nvidia':}
     package {'nvidia-utils':}
+    package {'libva-vdpau-driver':}
     include base::packaging::multilib
     package { 'lib32-nvidia-utils':
         require => Class['base::packaging::multilib']
