@@ -16,3 +16,6 @@
 [submodule "modules/desktop/files/fonts/.fonts"]
 	path = modules/desktop/files/fonts/.fonts
 	url = https://github.com/Lokaltog/powerline-fonts
+[submodule "modules/browser/files/firefox/html"]
+	path = modules/browser/files/firefox/html
+	url = https://github.com/Indiv0/html
