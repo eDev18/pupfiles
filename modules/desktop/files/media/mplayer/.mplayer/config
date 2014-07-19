@@ -1,7 +1,6 @@
 vo=vdpau,gl:yuv=2:force-pbo:ati-hack,xv
 double=1
 autoq=100
-fullscreen=1
 ao=alsa
 alang=jp,jpn,en,eng,fr,fre,es,esp
 slang=en,eng,fr,fre,es,esp
