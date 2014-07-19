@@ -18,6 +18,9 @@ class desktop (
             include desktop::graphics::intel
         }
     }
+    if $browser {
+        browser {"${browser}":}
+    }
     if $apps {
         include desktop::apps
     }
