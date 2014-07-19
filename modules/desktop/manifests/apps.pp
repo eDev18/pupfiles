@@ -4,11 +4,13 @@ class desktop::apps {
     include desktop::apps::java
     include desktop::apps::meld
     include desktop::apps::tex
+    include desktop::apps::ums
 
     package{'archey':}
     package{'cmatrix':}
     package{'evince':}
     package{'gimp':}
+    package{'scrot':} 
     package{'skype':} 
     package{'tty-clock':}
 }
