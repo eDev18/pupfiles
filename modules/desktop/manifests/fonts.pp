@@ -3,7 +3,7 @@ class desktop::fonts {
     package {'ttf-lato':}
     package {'terminess-powerline-font':}
     package {'urw-garamond':}
-    package {'texlive-fontsextra':}
+    package {'garamondx':}
 
     enduser_file { '.fonts':
         ensure  => directory,
