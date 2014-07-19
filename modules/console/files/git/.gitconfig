@@ -10,7 +10,7 @@
     pager = true
     ui = auto
 [core]
-    pager = most
+    pager = less
 [alias]
     rclone = clone --recursive
     a = add
