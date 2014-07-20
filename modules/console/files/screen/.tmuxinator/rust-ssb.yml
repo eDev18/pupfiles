@@ -1,0 +1,12 @@
+# ~/.tmuxinator/rust-ssb.yml
+
+name: rust-ssb
+root: ~/code/rust-ssb/
+
+windows:
+  - editor:
+      layout: 252c,186x81,0,0{120x81,0,0,2,65x81,121,0,4}
+      panes:
+        - vim
+        - #empty, will just run plain zsh
+  - logs: tail -f log/development.log
