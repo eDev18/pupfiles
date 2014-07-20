@@ -8,10 +8,10 @@ Xft.lcdfilter: lcddefault
 
 ! Setting an even font size will break powerline symbols!
 
-!*font: xft:Meslo LG S for Powerline:size=9
+*font:xft:Meslo LG S for Powerline:size=9
 
-URxvt*font:xft:Inconsolata\-dz for Powerline:style=dz:size=11
-!URxvt*font:xft:Inconsolata for Powerline:style=Medium:size=10
+!URxvt*font:xft:Inconsolata-dz for Powerline:style=dz:size=11
+!*font:xft:Inconsolata for Powerline:size=9
 
 !URxvt*font:xft:Terminess\\ Powerline:size=10
 !URxvt*boldFont:xft:Terminess\\ Powerline:bold:size=10
