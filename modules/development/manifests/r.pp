@@ -1,3 +1,3 @@
 class development::r {
-    package{'r':}
+    package {'r':}
 }
