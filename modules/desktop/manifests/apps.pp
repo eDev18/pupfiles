@@ -5,6 +5,7 @@ class desktop::apps {
     include desktop::apps::meld
     include desktop::apps::tex
     include desktop::apps::ums
+    include desktop::apps::vim
 
     package{'archey':}
     package{'cmatrix':}
