@@ -19,6 +19,9 @@ urxvtd -q -o -f &
 # Wallpaper
 hsetroot -fill ~/.wallpapers/dubai.jpg
 
+# Redshift
+~/.redshift.sh &
+
 # Fix Java window errors (e.g. IntelliJ)
 wmname LG3D
 

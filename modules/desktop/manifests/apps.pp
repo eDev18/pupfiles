@@ -3,6 +3,7 @@ class desktop::apps {
     include desktop::apps::hsetroot
     include desktop::apps::java
     include desktop::apps::meld
+    include desktop::apps::redshift
     include desktop::apps::tex
     include desktop::apps::ums
     include desktop::apps::vim

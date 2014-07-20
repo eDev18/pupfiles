@@ -1,4 +1,3 @@
-redshift
 mariadb
 bar
 bin scripts
