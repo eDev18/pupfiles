@@ -49,13 +49,23 @@ getpackages() {
     for package; do
         echo "Ensuring we have $package"
         if ! puppet resource package "$package" ensure=installed &> /dev/null; then
-            echo "Puppet failed to make sure we have 
-$package." >&2
+            echo "Puppet failed to make sure we have $package." >&2
             exit 1
         fi
     done
 }
 getpackages openssh git scrypt python python2 python-scrypt
+getmodules() {
+    for module; do
+        echo "Ensuring we have $module"
+        if ! puppet module install "$module" --modulepath /etc/puppet/modules &> /dev/null; then
+            echo "Puppet failed to make sure we have $module." >&2
+            exit 1
+        fi
+    done
+}
+getmodules puppetlabs/mysql
+
 if [ ! -d "$pupDir" ]; then
     mkdir -p "$pupDir"
     if ! git clone --recursive "$pupUrl" "$pupDir"; then
