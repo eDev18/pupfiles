@@ -3,6 +3,7 @@ class browser::firefox {
     include browser::firefox::betterprivacy
     include browser::firefox::checkdefaultbrowser
     include browser::firefox::cookiewhitelistwithbuttons
+    include browser::firefox::desktop
     include browser::firefox::duckduckgo
     include browser::firefox::downloads
     include browser::firefox::flashblock
