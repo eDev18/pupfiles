@@ -6,7 +6,7 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # The box to build off of.
-    config.vm.box = "mschulze/arch-mini-i386"
+    config.vm.box = "cameronmalek/arch1403"
 
     # Virtualbox-specific configuration:
     config.vm.provider "virtualbox" do |vb|
@@ -14,6 +14,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         vb.gui = true
 
         # Use VBoxManage to change memory:
-        vb.customize ["modifyvm", :id, "--memory", "1024"]
+        vb.customize ["modifyvm", :id, "--memory", "5120"]
     end
 end
