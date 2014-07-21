@@ -7,9 +7,8 @@ pulseaudio --start --daemonize
 [ ! -s ~/.config/mpd/pid ] && mpd ~/.config/mpd/mpd.conf
 
 # Set X resources
-#xbindkeys
-#xset +fp /usr/share/fonts/local/
-#xset fp rehash
+xset +fp /usr/share/fonts/local/
+xset fp rehash
 [[ -f ~/.config/Xresources ]] && xrdb -load ~/.config/Xresources
 xrdb -merge ~/.colors/base16-tomorrow.dark.xresources
 

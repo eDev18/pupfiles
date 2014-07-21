@@ -1,27 +1,66 @@
-#!/bin/sh
+#!/bin/bash
+source $(dirname $0)/config
 
-while true
-do
-    batt_info=`acpi -b | sed 's/,//g'`
-    batt_level=$(echo $batt_info | sed 's/%//' | awk '{ print $4 }' )
+# BATTERY ICONS:
+#      
 
-    if [[ $batt_level -le 10 ]]; then
-        icon=
-        notify-send -u critical -a "Battery Monitor" "Battery CRITICAL" "Battery capacity at less than 10%, plug in NAO!"
-    elif [[ $batt_level -le 50 ]]; then
-        icon=
-    elif [[ $batt_level -ge 80 ]]; then
-        icon=
-    else
-        icon=
-    fi
-    echo $batt_info \
-        | sed 's/Battery 0: /panel_battery/' \
-        | sed -r 's/Charging|Unknown/%{F#a6e22e}%{F-}/' \
-        | sed "s/Discharging/%{F#a6e22e}$icon%{F-}/" \
-        | sed 's/ until charg.*$//' \
-        | sed 's/ charging at.*$//' \
-        | sed 's/ remain.*$//' \
-        | sed -r 's/([0-9]{2}:[0-9]{2}:[0-9]{2})$/\(\1\)/g'
-    sleep 10
-done
+BAT=`acpi -b | awk '{gsub(/%,/,""); print $4}' | sed 's/%//g'`
+STATUS=`acpi -b | awk '{gsub(/,/,""); print $3}'`
+
+# Set Icon
+icon=""
+if [[ $STATUS != "Discharging" ]]; then
+	icon=""
+elif [[ $BAT -lt 10 ]]; then
+	icon=""
+elif [[ $BAT -lt 40 ]]; then
+	icon=""
+elif [[ $BAT -lt 70 ]]; then
+	icon=""
+else
+	icon=""
+fi
+s="«"
+#s="$s"
+
+bar=""
+case $BAT in
+	100)
+		bar=""
+		;;
+	[0-5])
+		bar="\f8$s$s$s$s$s$s$s$s$s"
+		icon="%{U#FFFF0000}%{+u}$icon"
+		;;
+	[5-9])
+		bar="\f3$s\f8$s$s$s$s$s$s$s$s"
+		icon="%{U#FFFFD300}%{+u}$icon"
+		;;
+	[1-2]*)
+		bar="$s$s\f8$s$s$s$s$s$s$s"
+		;;
+	3*)
+		bar="$s$s$s\f8$s$s$s$s$s$s"
+		;;
+	4*)
+		bar="$s$s$s$s\f8$s$s$s$s$s"
+		;;
+	5*)
+		bar="$s$s$s$s$s\f8$s$s$s$s"
+		;;
+	6*)
+		bar="$s$s$s$s$s$s\f8$s$s$s"
+		;;
+	7*)
+		bar="$s$s$s$s$s$s$s\f8$s$s"
+		;;
+	8*)
+		bar="$s$s$s$s$s$s$s$s\f8$s"
+		;;
+	*)
+		bar="$s$s$s$s$s$s$s$s$s"
+		;;
+esac
+
+# Create Bar
+echo "%{F$COLOR_ICON}$icon%{F-} "

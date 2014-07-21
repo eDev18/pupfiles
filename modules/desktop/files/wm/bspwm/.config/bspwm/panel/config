@@ -1,0 +1,36 @@
+PANEL_FIFO="/tmp/bar.fifo"
+
+FONT1="-*-stlarch-medium-r-*-*-10-*-*-*-*-*-*-*"
+FONT2="-gohu-gohufont-medium-*"
+
+COLOR_BACKGROUND="#FF181512"
+COLOR_FOREGROUND="#FFbea492"
+COLOR_ICON="#FF504339"
+COLOR_ACTIVE="#FF9a875f"
+COLOR_OCCUPIED="#FF332d29"
+COLOR_URGENT="#FF8c644c"
+
+# Height of underlines / overlines
+LINEHEIGHT="3"
+
+# Panel geometry
+PANEL_HEIGHT=14
+PANEL_WIDTH=''
+PANEL_GEOMETRY="${PANEL_WIDTH}x${PANEL_HEIGHT}+0+0"
+
+# Notification geometry
+NOTIFY_HEIGHT=$PANEL_HEIGHT
+NOTIFY_WIDTH=400
+NOTIFY_GEOMETRY="${NOTIFY_WIDTH}x${NOTIFY_HEIGHT}+0+0"
+
+# Duration of notifications
+DURATION=2
+
+# Monitor to display panel on
+MONITOR="$(bspc query -M | tail -n1)"
+
+# Volume change clip
+CLIP="/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+# Length of volume bar
+BAR_LENGTH=20
+BAR_CHAR='='
