@@ -1,0 +1,12 @@
+#!/bin/sh
+while true
+do
+    volume_info=`/usr/bin/pulseaudio-ctl | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"`
+    mute=$(echo "$volume_info" | grep 'Is sink muted' | awk '{ printf "%s", $5 }')
+    level=$(echo "$volume_info" | grep 'Volume level' | awk "{ if (\"$mute\" == \"no\") { printf \"%s\", \$4 } else { printf \"mute\" } }")
+    echo $mute
+    icon=$(printf "%s %s" $mute $level | awk '{ if ($1 == "yes") { printf "" } else { if ($1 <= 20) { printf "" } else { printf "" } } }')
+
+    echo "panel_volume%{F#a6e22e}$icon%{F-} $level"
+    sleep 5
+done

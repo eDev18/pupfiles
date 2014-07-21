@@ -1,5 +1,10 @@
 #! /bin/sh
 
+# bspwm profile.
+export BSPWM_TREE=/tmp/bspwm.tree
+export BSPWM_HISTORY=/tmp/bspwm.history
+export BSPWM_STACK=/tmp/bspwm.stack
+
 if [ -e "$BSPWM_TREE" ] ; then
     bspc restore -T "$BSPWM_TREE" -H "$BSPWM_HISTORY" -S "$BSPWM_STACK"
     rm "$BSPWM_TREE" "$BSPWM_HISTORY" "$BSPWM_STACK"
@@ -17,3 +22,7 @@ bspc monitor -d TERMINALS WEB DEVELOPMENT MEDIA FILES GRAPHICS GAMES TORRENT
 bspc rule -a Gimp desktop=^8 follow=on floating=on
 bspc rule -a Firefox desktop=^2
 bspc rule -a mplayer floating=on
+
+# Launch bar
+export PATH="$HOME/.config/bspwm/panel:$PATH"
+panel &

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+while true
+do
+    top -bn 2 -d 0.25 | grep '^%Cpu' | tail -n 1 | sed 's/,/ /g' | awk '{ printf "panel_cpu%{F#a6e22e}%{F-} %3.2f\n", 100-$8 }'
+
+    sleep 5
+done

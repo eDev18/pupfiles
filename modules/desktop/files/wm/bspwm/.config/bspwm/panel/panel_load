@@ -1,0 +1,7 @@
+#!/bin/sh
+
+while true
+do
+    cat /proc/loadavg | awk '{ printf "panel_load%{F#a6e22e}LD%{F-} %s %s %s\n", $1, $2, $3}'
+    sleep 5
+done

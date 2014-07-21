@@ -9,4 +9,5 @@ class desktop::media {
     package { 'handbrake': }
     package { 'pulseaudio': }
     aur_package { 'pavucontrol': }
+    aur_package { 'pulseaudio-ctl': }
 }
