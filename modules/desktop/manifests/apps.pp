@@ -1,6 +1,7 @@
 class desktop::apps {
     include desktop::apps::flashplugin
     include desktop::apps::hsetroot
+    include desktop::apps::irssi
     include desktop::apps::java
     include desktop::apps::meld
     include desktop::apps::redshift

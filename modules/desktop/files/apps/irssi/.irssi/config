@@ -1,0 +1,29 @@
+## SERVERS
+servers = (
+  # {{{
+  {
+    address = "irc.nikitapek.in";
+    port = "6697";
+    use_ssl = "yes";
+    autoconnect = "yes";
+  }
+);
+# }}}
+
+settings = {
+  core = { real_name = "Nikita"; user_name = "indiv0"; nick = "indiv0"; };
+  "fe-text" = { actlist_sort = "refnum"; };
+};
+statusbar = {
+  default = {
+    awl_0 = {
+      items = {
+        barstart = { priority = "100"; };
+        awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
+  };
+};
+logs = { };
+aliases = { znc = "quote znc"; wc = "window close"; };
