@@ -70,7 +70,7 @@ else
     fi
     if ! git submodule update &> /dev/null; then
         echo 'Could not update submodules.'
-        exit 1
+        #exit 1
     fi
 fi
 cd "$pupDir"

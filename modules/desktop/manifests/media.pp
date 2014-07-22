@@ -9,6 +9,7 @@ class desktop::media {
     package {'handbrake':}
     package {'pulseaudio':}
     package {'pulseaudio-alsa':}
+    include base::packaging::multilib
     package {'lib32-libpulse':}
     package {'lib32-alsa-plugins':}
     aur_package {'pavucontrol':}
