@@ -19,3 +19,9 @@
 [submodule "modules/browser/files/firefox/html"]
 	path = modules/browser/files/firefox/html
 	url = https://github.com/Indiv0/html
+[submodule "modules/development/files/pandoc-templates"]
+	path = modules/development/files/pandoc-templates
+	url = https://github.com/Indiv0/pandoc-templates
+[submodule "modules/development/files/r/.pandoc"]
+	path = modules/development/files/r/.pandoc
+	url = https://github.com/Indiv0/pandoc-templates
