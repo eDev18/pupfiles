@@ -12,7 +12,7 @@ class desktop::apps {
     package{'cmatrix':}
     package{'evince':}
     package{'gimp':}
-    package{'mirage':}
+    package{'mirage':} 
     package{'scrot':} 
     package{'skype':} 
     package{'tty-clock':}
