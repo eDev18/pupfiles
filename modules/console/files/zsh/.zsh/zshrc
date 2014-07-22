@@ -26,6 +26,11 @@ ZSH="$ZSHC/oh-my-zsh"
 ZSH_THEME="nanotech"
 source "$ZSH/oh-my-zsh.sh"
 
+# Disable autocorrect.
+DISABLE_CORRECTION="true"
+unsetopt correct
+unsetopt correct_all
+
 # Base16 shell
 BASE16_SCHEME="tomorrow.dark"
 BASE16_SHELL="$ZSHC/base16-shell/base16-$BASE16_SCHEME.sh"
