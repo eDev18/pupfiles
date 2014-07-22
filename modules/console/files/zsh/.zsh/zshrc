@@ -56,7 +56,7 @@ if [ -f "$ZSHC/zsh_aliases" ]; then
 fi
 
 export EDITOR=vim
-export PATH="/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/core_perl:/opt/java/bin:$HOME/.cabal/bin:/usr/games"
+export PATH="/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/core_perl:/opt/java/bin:$HOME/.cabal/bin:$HOME/.bin:/usr/games"
 export LD_LIBRARY_PATH="/usr/local/lib"
 export PAGER=less
 export SSH_KEY_PATH="~/.ssh/id_rsa"

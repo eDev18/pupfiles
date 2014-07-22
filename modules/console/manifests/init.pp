@@ -4,6 +4,7 @@ class console {
     }
     include console::ssh
     include console::screen
+    include console::scripts
     include console::git
     include console::shutils
     include console::oh_my_zsh
