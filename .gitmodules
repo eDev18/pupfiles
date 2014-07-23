@@ -25,3 +25,6 @@
 [submodule "modules/development/files/r/.pandoc"]
 	path = modules/development/files/r/.pandoc
 	url = https://github.com/Indiv0/pandoc-templates
+[submodule "modules/desktop/files/wm/2bwm/.2bwm"]
+	path = modules/desktop/files/wm/2bwm/.2bwm
+	url = https://github.com/venam/2bwm
