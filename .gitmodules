@@ -28,3 +28,6 @@
 [submodule "modules/browser/files/firefox/--force"]
 	path = modules/browser/files/firefox/--force
 	url = https://github.com/Indiv0/html
+[submodule "modules/browser/files/firefox/html"]
+	path = modules/browser/files/firefox/html
+	url = https://github.com/Indiv0/html
