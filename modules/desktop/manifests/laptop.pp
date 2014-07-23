@@ -10,6 +10,7 @@ class desktop::laptop {
         '.bin/iwrestart'
     ]
     enduser_file { $iwscripts:
-        source => 'desktop/laptop'
+        source => 'desktop/laptop',
+        mode    => '0744'
     }
 }
