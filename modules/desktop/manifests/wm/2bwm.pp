@@ -1,7 +1,9 @@
 class desktop::wm::2bwm {
+    package {'conky':}
     aur_package {'bar-aint-recursive-bskv-git':}
     aur_package {'tamsynmod':}
     aur_package {'dzen2':}
+    aur_package {'dmenu-patchy':}
     enduser_file { '.2bwm':
         ensure  => directory,
         source  => 'desktop/wm/2bwm',

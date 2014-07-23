@@ -1,5 +1,4 @@
 class desktop::wm {
-    package {'dmenu':}
     package {'wmname':}
     
     include desktop::wm::2bwm

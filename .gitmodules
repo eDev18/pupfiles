@@ -7,18 +7,12 @@
 [submodule "modules/puppetlabs-stdlib"]
 	path = modules/puppetlabs-stdlib
 	url = https://github.com/puppetlabs/puppetlabs-stdlib.git
-[submodule "modules/console/files/zsh/.zsh/base16-shell"]
-	path = modules/console/files/zsh/.zsh/base16-shell
-	url = git@github.com:chriskempson/base16-shell.git
 [submodule "modules/desktop/files/fonts/powerline-fonts"]
 	path = modules/desktop/files/fonts/powerline-fonts
 	url = https://github.com/Lokaltog/powerline-fonts
 [submodule "modules/desktop/files/fonts/.fonts"]
 	path = modules/desktop/files/fonts/.fonts
 	url = https://github.com/Lokaltog/powerline-fonts
-[submodule "modules/browser/files/firefox/html"]
-	path = modules/browser/files/firefox/html
-	url = https://github.com/Indiv0/html
 [submodule "modules/development/files/pandoc-templates"]
 	path = modules/development/files/pandoc-templates
 	url = https://github.com/Indiv0/pandoc-templates
@@ -28,3 +22,12 @@
 [submodule "modules/desktop/files/wm/2bwm/.2bwm"]
 	path = modules/desktop/files/wm/2bwm/.2bwm
 	url = https://github.com/venam/2bwm
+[submodule "modules/browser/files/firefox/--force"]
+	path = modules/browser/files/firefox/--force
+	url = https://github.com/Indiv0/html
+[submodule "modules/browser/files/firefox/html"]
+	path = modules/browser/files/firefox/html
+	url = https://github.com/Indiv0/html
+[submodule "modules/console/files/zsh/.zsh/base16-shell"]
+	path = modules/console/files/zsh/.zsh/base16-shell
+	url = https://github.com/chriskempson/base16-shell

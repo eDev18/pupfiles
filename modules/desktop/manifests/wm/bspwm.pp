@@ -2,6 +2,7 @@ class desktop::wm::bspwm {
     package {'acpi':} # Needed for bar
     package {'bc':}
     package {'lm_sensors':}
+    package {'dmenu':}
     aur_package {'bspwm':}
     aur_package {'bar-aint-recursive-git':}
     aur_package {'gohufont':}
