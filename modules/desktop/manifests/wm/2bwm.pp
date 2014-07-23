@@ -18,8 +18,11 @@ class desktop::wm::2bwm {
         notify  => Exec['make-2bwm']
     }
     file { '/usr/bin/2bwm_dmenu.sh':
-        ensure  => present,
-        source  => 'puppet:///modules/desktop/wm/2bwm/2bwm_dmenu.sh'
+        ensure => present,
+        source => 'puppet:///modules/desktop/wm/2bwm/2bwm_dmenu.sh',
+        owner  => 'root',
+        group  => 'root',
+        mode   => '0755'
     }
     exec { 'make-2bwm':
         command     => '/usr/bin/env make',
