@@ -16,9 +16,6 @@
 [submodule "modules/desktop/files/fonts/.fonts"]
 	path = modules/desktop/files/fonts/.fonts
 	url = https://github.com/Lokaltog/powerline-fonts
-[submodule "modules/browser/files/firefox/html"]
-	path = modules/browser/files/firefox/html
-	url = https://github.com/Indiv0/html
 [submodule "modules/development/files/pandoc-templates"]
 	path = modules/development/files/pandoc-templates
 	url = https://github.com/Indiv0/pandoc-templates
@@ -28,3 +25,6 @@
 [submodule "modules/desktop/files/wm/2bwm/.2bwm"]
 	path = modules/desktop/files/wm/2bwm/.2bwm
 	url = https://github.com/venam/2bwm
+[submodule "modules/browser/files/firefox/--force"]
+	path = modules/browser/files/firefox/--force
+	url = https://github.com/Indiv0/html
