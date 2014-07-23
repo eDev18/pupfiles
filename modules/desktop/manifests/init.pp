@@ -5,7 +5,7 @@ class desktop (
     $apps = true,
     $fonts = true,
     $media = true,
-    $games = true,
+    $games = true
 ) {
     include desktop::xorg
     include desktop::wm
