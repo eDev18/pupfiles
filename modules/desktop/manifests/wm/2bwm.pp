@@ -1,4 +1,5 @@
 class desktop::wm::2bwm {
+    package {'conky':}
     aur_package {'bar-aint-recursive-bskv-git':}
     aur_package {'tamsynmod':}
     aur_package {'dzen2':}
