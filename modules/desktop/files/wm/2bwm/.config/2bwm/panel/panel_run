@@ -2,7 +2,7 @@
 
 # Source the config.
 cd $(dirname $0)
-source $(dirname $0)/config
+source ./config
 
 # Start the 3 dzen panels to create the statusbar
 ./panel \
