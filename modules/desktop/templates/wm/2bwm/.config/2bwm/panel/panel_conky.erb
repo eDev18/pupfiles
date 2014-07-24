@@ -15,7 +15,7 @@ $if_mpd_playing ^fg(\#fffff)${if_match "${mpd_status}" == "Playing"}^ca(1, ncmpc
 #^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/left_triangle.xbm)^bg(\#d64937)^fg(\#ffffff) Ð ${exec sh ./gmail_count } ^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/right_triangle.xbm)\
 ^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/left_triangle.xbm)^bg(\#d64937)^fg(\#ffffff) Ð ${exec sh ./down_count } ^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/right_triangle.xbm)\
 # Pacman
-^bg(\#1d1f21)^fg(\#ffffff)^ca(1, urxvt -g 65x70 -e yaourt -Syu) ¸ ${exec x=$(yaourt -Qua | wc -l); echo $x} ^ca()\
+^bg(\#1d1f21)^fg(\#ffffff)^ca(1, urxvt -g 65x70 -e yaourt -Syua) ¸ ${exec x=$(yaourt -Qua | wc -l); echo $x} ^ca()\
 # Memory usage
 ^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/left_triangle.xbm)^bg(\#d64937)^fg(\#ffffff) ^i($HOME/.config/2bwm/panel/icons/ram.xbm) ${memperc}% ^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/right_triangle.xbm)\
 # CPU usage
