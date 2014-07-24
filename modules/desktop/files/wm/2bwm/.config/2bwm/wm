@@ -1,4 +1,4 @@
 #!/bin/sh
 
-./panel/panel_run
+$HOME/.config/2bwm/panel/panel_run
 exec ~/.2bwm/2bwm
