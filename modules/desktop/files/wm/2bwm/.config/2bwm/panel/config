@@ -14,9 +14,6 @@ panelheight=18
 font="-*-tamsynmod-medium-r-normal-*-14-101-100-100-c-70-iso8859-1"
 dzenfg="#1d1f21"
 
-# TX/RX
-INTERFACE="enp3s0"
-
 # Colors
 TRIANGLE_BG_COLOR="#1d1f21"
 TRIANGLE_FG_COLOR="#d64937"
