@@ -2,19 +2,7 @@
 
 # This script requires xdotool for the clickable workspace switcher
 
-# Variables
-lt="^i($HOME/.config/2bwm/panel/icons/left_triangle.xbm)"
-rt="^i($HOME/.config/2bwm/panel/icons/right_triangle.xbm)"
-lwst="^i($HOME/.config/2bwm/panel/icons/left_workspace_triangle.xbm)"
-tbg="^bg(#2d2d2d)"
-tfg="^fg(#d64937)"
-circle="^i($HOME/.config/2bwm/panel/icons/circle.xbm)"
-circle2="^i($HOME/.config/2bwm/panel/icons/circle_outline.xbm)"
-cbg="^bg(#d64937)"
-cfg="^fg(#ffffff)"
-ctbg="^bg(#d64937)"
-ctfg="^fg(#2d2d2d)"
-workspaces=4 # Choose how many workspaces you want to use. (0=1, 1=2 etc)
+source $(dirname $0)/config
 
 # Loop output to the panel
 while :

@@ -1,0 +1,49 @@
+#!/bin/sh
+
+# dzen2 settings
+screenwidth=`xrandr --current | grep current | awk '{print $8}'`
+panel1width=`printf "%.0f" $(echo "scale=5; (45.572916*$screenwidth)/100" | bc)`
+panel2width=`printf "%.0f" $(echo "scale=5; (10.41600*$screenwidth)/100" | bc)`
+panel3width=`printf "%.0f" $(echo "scale=5; (41.10416*$screenwidth)/100" | bc)`
+panel4width=`printf "%.0f" $(echo "scale=5; (2.80625*$screenwidth)/100" | bc)`
+panel2slavewidth=`printf "%.0f" $(echo "scale=5; (8.33333*$screenwidth)/100" | bc)`
+panel2xoffset=$panel1width
+panel3xoffset=$(($panel2xoffset + $panel2width))
+panel4xoffset=$(($panel3xoffset + $panel3width))
+panelheight=18
+font="-*-tamsynmod-medium-r-normal-*-14-101-100-100-c-70-iso8859-1"
+dzenfg="#1d1f21"
+
+# TX/RX
+INTERFACE="enp3s0"
+
+# Colors
+TRIANGLE_BG_COLOR="#1d1f21"
+TRIANGLE_FG_COLOR="#d64937"
+CIRCLE_COLOR="#ffffff"
+
+# Icons
+ICON_DIR="`pwd`/icons"
+circle="^i($ICON_DIR/circle.xbm)"
+circle2="^i($ICON_DIR/circle_outline.xbm)"
+lt="^i($ICON_DIR/left_triangle.xbm)"
+rt="^i($ICON_DIR/right_triangle.xbm)"
+lwst="^i($ICON_DIR/left_workspace_triangle.xbm)"
+vf="^i($ICON_DIR/volume_full.xbm)"
+vh="^i($ICON_DIR/volume_half.xbm)"
+vm="^i($ICON_DIR/volume_muted.xbm)"
+
+# Common
+cbg="^bg($TRIANGLE_FG_COLOR)"
+cfg="^fg($CIRCLE_COLOR)"
+tbg="^bg($TRIANGLE_BG_COLOR)"
+tfg="^fg($TRIANGLE_FG_COLOR)"
+ctbg="^bg($TRIANGLE_FG_COLOR)"
+ctfg="^fg($TRIANGLE_BG_COLOR)"
+
+# Workspaces
+workspaces=4 # Choose how many workspaces you want to use. (0=1, 1=2 etc)
+
+# Volume
+bg="^bg($TRIANGLE_FG_COLOR)"
+fg="^fg($CIRCLE_COLOR)"

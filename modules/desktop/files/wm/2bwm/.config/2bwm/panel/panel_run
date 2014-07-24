@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Source the config.
+cd $(dirname $0)
+source $(dirname $0)/config
+
+# Start the 3 dzen panels to create the statusbar
+./panel \
+    | dzen2 -bg "$dzenfg" -p -ta l -fn "$font" -h $panelheight -tw $panel1width &
+./calendar \
+    | dzen2 -p -u -fn "$font" -x $panel2xoffset -tw $panel2width -h $panelheight -w $panel2slavewidth -sa c -l 8 -e 'button1=togglecollapse' &
+conky -c ./panel_conky \
+    | dzen2 -p -ta r -fn "$font" -x $panel3xoffset -h $panelheight -tw $panel3width &
+./volume \
+    | dzen2 -bg "$dzenfg" -p -fn "$font" -x $panel4xoffset -h $panelheight -tw $panel4width -e 'button5=exec:amixer set Master 5%-:;button4=exec:amixer set Master 5%+:;button1=exec:amixer set Master toggle:' &
