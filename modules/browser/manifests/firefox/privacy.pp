@@ -22,7 +22,7 @@ class browser::firefox::privacy {
         value => true
     }
     firefox_pref { 'signon.rememberSignons':
-        value => false
+        value => true # Remember password information
     }
     firefox_pref { 'geo.enabled':
         value => false
