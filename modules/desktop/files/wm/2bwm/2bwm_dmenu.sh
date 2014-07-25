@@ -1,5 +1,5 @@
 #!/bin/sh
-FONT="Tamsyn:6"
+FONT="Tamsynmod:6"
 BG_COLOR="#282a2e"
 CURSOR_BG_COLOR="#3f3f3f"
 CURSOR_FG_COLOR="#d64937"
