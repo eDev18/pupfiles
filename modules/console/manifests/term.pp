@@ -1,5 +1,10 @@
 class console::term {
-    package {'rxvt-unicode-patched':}
+    package { 'rxvt-unicode':
+        ensure => absent
+    }
+    aur_package { 'rxvt-unicode-patched':
+        require => Package[ 'rxvt-unicode' ]
+    }
     package {'urxvt-perls':}
     aur_package {'urxvt-vtwheel':}
     enduser_file { '.config/Xresources':
