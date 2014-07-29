@@ -1,2 +1,4 @@
 directory: /media/music
 library: /media/music/library.blb
+import:
+    move: yes
