@@ -5,6 +5,7 @@ class base (
     class { 'base::grub':
         grub_resolution => $grub_resolution,
     }
+    include base::kernel::linux_headers
     include base::grub
     include base::root
     include base::nobeep

@@ -1,5 +1,6 @@
 class desktop::graphics::nvidia {
-    package {'nvidia':}
+    # package {'nvidia':}
+    aur_package { 'nvidia-dkms': }
     package {'nvidia-utils':}
     package {'libva-vdpau-driver':}
     include base::packaging::multilib
@@ -19,4 +20,6 @@ class desktop::graphics::nvidia {
         source  => 'puppet:///modules/desktop/graphics/edid-shimian.bin',
         require => Class['desktop::xorg'],
     }
+
+    aur_package { 'nvidia-hook': }
 }
