@@ -1,4 +1,5 @@
 class desktop::apps {
+    include desktop::apps::beets
     include desktop::apps::flashplugin
     include desktop::apps::hsetroot
     include desktop::apps::irssi
