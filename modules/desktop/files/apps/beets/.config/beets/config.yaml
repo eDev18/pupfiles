@@ -3,4 +3,4 @@ library: /media/music/library.blb
 import:
     move: yes
     write: yes
-plugins: convert fromfilename lyrics mbsync scrub fetchart
+plugins: convert fromfilename lyrics mbsync scrub fetchart embedart
