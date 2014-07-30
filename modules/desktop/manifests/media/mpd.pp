@@ -1,6 +1,5 @@
 class desktop::media::mpd {
     package {'mpd':}
-    aur_package {'mpdviz':}
     enduser_file { '.config/mpd':
         ensure => directory,
     }
