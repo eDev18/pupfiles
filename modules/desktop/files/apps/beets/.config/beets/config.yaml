@@ -4,3 +4,5 @@ import:
     move: yes
     write: yes
 plugins: convert fromfilename lyrics mbsync scrub fetchart embedart
+embedart:
+    auto: no
