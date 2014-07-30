@@ -4,7 +4,7 @@ xsetroot -cursor_name left_ptr
 # Pulseaudio
 pulseaudio --start --daemonize
 # MPD daemon start (if no other user instance exists)
-[ ! -s ~/.config/mpd/pid ] && mpd ~/.config/mpd/mpd.conf
+mpd ~/.config/mpd/mpd.conf
 
 # Set X resources
 xset +fp /usr/share/fonts/local/
