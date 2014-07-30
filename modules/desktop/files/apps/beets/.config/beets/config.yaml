@@ -9,3 +9,7 @@ embedart:
 mpd:
     host: localhost
     port: 6600
+convert:
+    max_bitrate: 192
+    dest: /media/converted_music
+    threads: 4
