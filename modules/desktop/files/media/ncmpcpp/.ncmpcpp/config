@@ -1,4 +1,4 @@
-mpd_host = "/home/indiv0/.config/mpd/mpd.sock"
+mpd_host = "localhost"
 user_interface = "alternative"
 ncmpcpp_directory = "~/.ncmpcpp"
 mpd_music_dir = "/media/music/"

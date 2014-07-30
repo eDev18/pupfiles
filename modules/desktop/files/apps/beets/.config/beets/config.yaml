@@ -3,6 +3,9 @@ library: /media/music/library.blb
 import:
     move: yes
     write: yes
-plugins: convert fromfilename lyrics mbsync scrub fetchart embedart
+plugins: convert fromfilename lyrics mbsync scrub fetchart embedart mpdstats mpdupdate
 embedart:
     auto: no
+mpd:
+    host: localhost
+    port: 6600
