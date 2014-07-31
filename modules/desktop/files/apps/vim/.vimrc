@@ -38,10 +38,6 @@ au BufReadPost *.Rmd set syntax=markdown
 " Force .Rmd files to be registered as Markdown files (for snipmate).
 au BufNewFile,BufRead *.Rmd set filetype=markdown
 
-" Change snipMate trigger mapping from <Tab> to <C-J>
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
-
 " Turn on line numbering.
 set nu
 
@@ -103,3 +99,8 @@ imap jk <c-c>
 :nnoremap <C-n> :bnext<CR>
 :nnoremap <C-p> :bprevious<CR>
 
+" Use ctrl-[hjkl] to select the active split!
+nmap <silent> <c-k> :wincmd k<CR>
+nmap <silent> <c-j> :wincmd j<CR>
+nmap <silent> <c-h> :wincmd h<CR>
+nmap <silent> <c-l> :wincmd l<CR>
