@@ -13,6 +13,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
+Plugin 'wting/rust.vim'
 
 call vundle#end()
 filetype plugin indent on     " required!
@@ -37,6 +38,10 @@ syntax on
 au BufReadPost *.Rmd set syntax=markdown
 " Force .Rmd files to be registered as Markdown files (for snipmate).
 au BufNewFile,BufRead *.Rmd set filetype=markdown
+
+" Change snipMate trigger mapping from <Tab> to <C-J>
+imap <C-J> <Plug>snipMateNextOrTrigger
+smap <C-J> <Plug>snipMateNextOrTrigger
 
 " Turn on line numbering.
 set nu
@@ -104,3 +109,8 @@ nmap <silent> <c-k> :wincmd k<CR>
 nmap <silent> <c-j> :wincmd j<CR>
 nmap <silent> <c-h> :wincmd h<CR>
 nmap <silent> <c-l> :wincmd l<CR>
+
+" Enable racer support
+set hidden
+let g:racer_cmd = "/home/indiv0/projects/lib/racer/bin/racer"
+let $RUST_SRC_PATH="/home/indiv0/projects/lib/rust/src"

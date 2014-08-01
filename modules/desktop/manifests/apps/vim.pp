@@ -28,4 +28,16 @@ class desktop::apps::vim {
         require     => Exec['git vundle'],
         refreshonly => true
     }
+    # Install racer, rust autocompletion.
+    enduser_file { '.vim/plugin':
+        ensure  => directory,
+        require => Package['vim'],
+        noroot  => true
+    }
+    enduser_file { '.vim/plugin/racer.vim':
+        ensure  => file,
+        source  => 'desktop/apps/vim/racer/editors/racer.vim',
+        require => [Package['vim'], Enduser_file['.vim/plugin']],
+        noroot  => true
+    }
 }
