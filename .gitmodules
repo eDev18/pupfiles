@@ -31,3 +31,6 @@
 [submodule "modules/console/files/zsh/.zsh/base16-shell"]
 	path = modules/console/files/zsh/.zsh/base16-shell
 	url = https://github.com/chriskempson/base16-shell
+[submodule "modules/desktop/files/apps/vim/racer"]
+	path = modules/desktop/files/apps/vim/racer
+	url = https://github.com/phildawes/racer
