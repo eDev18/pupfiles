@@ -1,5 +1,6 @@
 class console::shutils {
     package {'ack':}
+    package {'the_silver_searcher':}
     package {'dos2unix':}
     package {'lftp':}
     package { 'mlocate':
