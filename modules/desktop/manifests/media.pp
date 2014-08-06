@@ -1,4 +1,6 @@
 class desktop::media {
+    include desktop::media::pulseaudio
+
     package {'vlc':}
     package {'ffmpeg':}
     include desktop::media::mpd
@@ -6,12 +8,5 @@ class desktop::media {
     include desktop::media::mplayer
     package {'mencoder':}
     package {'handbrake-cli':}
-    package {'handbrake':}
-    package {'pulseaudio':}
-    package {'pulseaudio-alsa':}
-    include base::packaging::multilib
-    package {'lib32-libpulse':}
-    package {'lib32-alsa-plugins':}
-    aur_package {'pavucontrol':}
-    aur_package {'pulseaudio-ctl':}
+    package {'handbrake':}    
 }
