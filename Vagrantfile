@@ -8,6 +8,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     # The box to build off of.
     config.vm.box = "cameronmalek/arch1403"
 
+    # Forward a port on the guest to the host.
+    config.vm.network "forwarded_port", guest: 8080, host: 8080
+
     # Virtualbox-specific configuration:
     config.vm.provider "virtualbox" do |vb|
         # Don't boot with headless mode
