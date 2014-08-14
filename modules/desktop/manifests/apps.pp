@@ -7,7 +7,6 @@ class desktop::apps {
     include desktop::apps::meld
     include desktop::apps::redshift
     include desktop::apps::tex
-    include desktop::apps::ums
     include desktop::apps::vim
 
     package{'archey':}
