@@ -61,18 +61,18 @@ nmap <leader>l :set list!<CR>
 " Use the same symbols as TextMate for tabstops and EOLs
 set listchars=tab:▸\ ,eol:¬
 
+highlight CustomError ctermbg=red ctermfg=white guibg=#592929
+" Highlight the background of text that goes over the 80 column in red.
+" Source: http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
+call matchadd('CustomError', '\%81v.\+', -1)
+
+" Highlight the background of extra white space text.
+call matchadd('CustomError', '/^\t\+/', -1)
+call matchadd('CustomError', '\s\+$', -1)
+
 " Invisible character colors
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
-
-" Show all trailing whitespace
-highlight ExtraWhitespace ctermbg=red ctermfg=white guibg=#592929
-match ExtraWhitespace /\s\+$\| \+\ze\t/
-
-" Highlight the background of text that goes over the 80 column in red.
-" Source: http://stackoverflow.com/questions/235439/vim-80-column-layout-concerns
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
 
 " Automatically strip trailing whitespace on write, without jumping the
 " cursor.
