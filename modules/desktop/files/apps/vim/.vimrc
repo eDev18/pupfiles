@@ -36,12 +36,6 @@ colorscheme base16-tomorrow
 syntax on
 " Force .Rmd files to be highlighted as Markdown.
 au BufReadPost *.Rmd set syntax=markdown
-" Force .Rmd files to be registered as Markdown files (for snipmate).
-au BufNewFile,BufRead *.Rmd set filetype=markdown
-
-" Change snipMate trigger mapping from <Tab> to <C-J>
-imap <C-J> <Plug>snipMateNextOrTrigger
-smap <C-J> <Plug>snipMateNextOrTrigger
 
 " Turn on line numbering.
 set nu
@@ -51,13 +45,6 @@ let g:airline_powerline_fonts=1
 set laststatus=2
 let g:airline#extensions#tabline#enabled=1
 let g:airline_theme='base16'
-
-" syntastic
-let g:syntastic_check_on_open=1
-let g:syntastic_enable_signs=1
-
-" LaTeX-Box
-let g:LatexBox_latexmk_preview_continuously=1
 
 " Fix indentation settings to 4 space tabs.
 set smartindent
@@ -79,7 +66,7 @@ highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
 " Show all trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
+highlight ExtraWhitespace ctermbg=red ctermfg=white guibg=#592929
 match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 " Highlight the background of text that goes over the 80 column in red.
@@ -95,7 +82,7 @@ fun! <SID>StripTrailingWhitespaces()
     %s/\s\+$//e
     call cursor(l, c)
 endfun
-autocmd FileType c,cpp,java,php,ruby,python autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
+autocmd FileType c,cpp,java,php,ruby,python,xml autocmd BufWritePre <buffer> :call <SID>StripTrailingWhitespaces()
 
 " Map the exit insert mode command to jk
 imap jk <c-c>
