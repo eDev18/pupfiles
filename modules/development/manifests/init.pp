@@ -6,6 +6,7 @@ class development {
     require server::services::mariadb
 
     include development::haskell
+    include development::java
     include development::r
     include development::rust
     include development::vagrant
