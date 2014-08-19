@@ -10,7 +10,7 @@ class development::haskell {
         command => shellquote(
             '/usr/bin/env', 'cabal', 'update'
         ),
-        environment => 'HOME=/home/indiv0',
+        environment => 'HOME=/home/ian',
         require     => Package['cabal-install'],
         notify      => Exec['install-pandoc-citeproc'],
         refreshonly => true
@@ -19,7 +19,7 @@ class development::haskell {
         command => shellquote(
             '/usr/bin/env', 'cabal', 'install', '--global', 'pandoc-citeproc'
         ),
-        environment => 'HOME=/home/indiv0',
+        environment => 'HOME=/home/ian',
         require     => Package['cabal-install', 'alex', 'happy'],
         notify      => Exec['install-pandoc'],
         refreshonly => true
@@ -28,7 +28,7 @@ class development::haskell {
         command => shellquote(
             '/usr/bin/env', 'cabal', 'install', '--global', 'pandoc'
         ),
-        environment => 'HOME=/home/indiv0',
+        environment => 'HOME=/home/ian',
         require     => Package['cabal-install', 'alex', 'happy'],
         refreshonly => true
     }

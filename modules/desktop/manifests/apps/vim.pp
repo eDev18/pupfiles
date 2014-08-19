@@ -13,7 +13,7 @@ class desktop::apps::vim {
         noroot  => true
     }
     exec { 'git vundle':
-        command => '/usr/bin/sudo -u indiv0 git clone https://github.com/gmarik/Vundle /home/indiv0/.vim/bundle/Vundle.vim',
+        command => '/usr/bin/sudo -u ian git clone https://github.com/gmarik/Vundle /home/ian/.vim/bundle/Vundle.vim',
         require => [
             Package['git'],
             Package['vim'],
@@ -24,7 +24,7 @@ class desktop::apps::vim {
         refreshonly => true
     }
     exec { 'vundle':
-        command     => '/usr/bin/echo -ne "\n" | /usr/bin/sudo -u indiv0 /usr/bin/vim +PluginInstall +qall > /dev/null',
+        command     => '/usr/bin/echo -ne "\n" | /usr/bin/sudo -u ian /usr/bin/vim +PluginInstall +qall > /dev/null',
         require     => Exec['git vundle'],
         refreshonly => true
     }

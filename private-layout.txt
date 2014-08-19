@@ -1,6 +1,6 @@
 private/manifests/desktop.pp
 private/modules/private/manifests/base/networking/hosts.pp
-private/modules/private/templates/base/indiv0/password
+private/modules/private/templates/base/ian/password
 private/modules/private/templates/base/root/password
 private/modules/private/templates/console/ssh/host_aliases.erb
 private/ssh.key

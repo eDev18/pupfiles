@@ -11,7 +11,7 @@ servers = (
 # }}}
 
 settings = {
-  core = { real_name = "Nikita"; user_name = "indiv0"; nick = "indiv0"; };
+  core = { real_name = "Nikita"; user_name = "ian"; nick = "ian"; };
   "fe-text" = { actlist_sort = "refnum"; };
 };
 statusbar = {

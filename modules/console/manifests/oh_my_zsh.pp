@@ -1,7 +1,7 @@
 class console::oh_my_zsh {
     require console::zsh
     aur_package {'zsh-completions':}
-    include base::indiv0
+    include base::ian
     include base::packaging::pkgfile
     enduser_file {'.zshrc':
         source => 'console/zsh',

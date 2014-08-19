@@ -20,16 +20,16 @@ define firefox_pref (
     } else {
         $actual_isdefault = 'false'
     }
-    exec { "indiv0 Firefox $profile - Set $key":
+    exec { "ian Firefox $profile - Set $key":
         command => shellquote(
             '/usr/bin/env', 'bash',
             '-c', template('firefox_pref/set_pref.sh.erb'),
-            'set_pref.sh', '/home/indiv0', $profile, $key, $actual_value, $hasquotes, $actual_isdefault
+            'set_pref.sh', '/home/ian', $profile, $key, $actual_value, $hasquotes, $actual_isdefault
         ),
         unless => shellquote(
             '/usr/bin/env', 'bash',
             '-c', template('firefox_pref/has_pref.sh.erb'),
-            'has_pref.sh', '/home/indiv0', $profile, $key, $actual_value, $hasquotes, $actual_isdefault
+            'has_pref.sh', '/home/ian', $profile, $key, $actual_value, $hasquotes, $actual_isdefault
         ),
         provider => 'shell'
     }

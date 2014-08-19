@@ -7,10 +7,10 @@ fi
 
 version=v1.0.0
 
-pupUrl=https://github.com/Indiv0/pupfiles
+pupUrl=https://github.com/eDev18/pupfiles
 pupDir=/var/lib/pupfiles
-pupPrivateUrlInitial=https://github.com/Indiv0/pupfiles-private
-pupPrivateUrlActual=git@github.com:Indiv0/pupfiles-private
+pupPrivateUrlInitial=https://github.com/eDev18/pupfiles-private
+pupPrivateUrlActual=git@github.com:eDev18/pupfiles-private
 
 scriptDir=$(dirname "$BASH_SOURCE")
 scriptDir=$(cd "$scriptDir" && pwd)

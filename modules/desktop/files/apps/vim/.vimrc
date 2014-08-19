@@ -99,5 +99,5 @@ nmap <silent> <c-l> :wincmd l<CR>
 
 " Enable racer support
 set hidden
-let g:racer_cmd = "/home/indiv0/projects/lib/racer/bin/racer"
-let $RUST_SRC_PATH="/home/indiv0/projects/lib/rust/src"
+let g:racer_cmd = "/home/ian/projects/lib/racer/bin/racer"
+let $RUST_SRC_PATH="/home/ian/projects/lib/rust/src"

@@ -31,7 +31,7 @@ class desktop::wm::2bwm {
     }
     exec { 'make-2bwm':
         command     => '/usr/bin/env make',
-        cwd         => '/home/indiv0/.2bwm',
+        cwd         => '/home/ian/.2bwm',
         refreshonly => true
     }
     enduser_file { '.config/2bwm':
