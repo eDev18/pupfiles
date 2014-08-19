@@ -1,8 +1,8 @@
 class { 'base':
-    grub_resolution => '1024x768,auto',
+    grub_resolution => '1366x768,auto',
 }
 
-class { 'base::indiv0': }
+class { 'base::ian': }
 
 class { 'console': }
 
