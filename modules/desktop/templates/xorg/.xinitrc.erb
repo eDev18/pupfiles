@@ -3,9 +3,6 @@ xsetroot -cursor_name left_ptr
 
 # Pulseaudio
 pulseaudio --start --daemonize
-# MPD daemon start (if no other user instance exists)
-mpd ~/.config/mpd/mpd.conf
-beet mpdstats &
 
 # Set X resources
 xset +fp /usr/share/fonts/local/
@@ -17,7 +14,7 @@ xrdb -merge ~/.colors/base16-tomorrow.dark.xresources
 urxvtd -q -o -f &
 
 # Wallpaper
-hsetroot -fill ~/.wallpapers/dubai.jpg
+hsetroot -fill ~/.wallpapers/winterMountains.jpg
 
 # Redshift
 ~/.redshift.sh &

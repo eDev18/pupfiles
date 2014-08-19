@@ -8,9 +8,9 @@ class base::grub (
         content => template('base/grub/grub.erb'),
         notify  => Exec['grub-mkconfig'],
     }
-    file { '/boot/grub/os1_wide.jpg':
+    file { '/boot/grub/bridges.jpg':
         require => Package['grub', 'os-prober'],
-        source  => 'puppet:///modules/base/grub/os1_wide.jpg',
+        source  => 'puppet:///modules/base/grub/bridges.jpg',
         notify  => Exec['grub-mkconfig'],
     }
     exec { 'grub-mkconfig':

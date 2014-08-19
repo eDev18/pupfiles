@@ -55,7 +55,7 @@ if [ -f "$ZSHC/zsh_aliases" ]; then
     source "$ZSHC/zsh_aliases"
 fi
 
-export EDITOR=vim
+export EDITOR=nano
 export PATH="/opt/android-sdk/tools:/opt/android-sdk/platform-tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/bin/core_perl:/opt/java/bin:$HOME/.cabal/bin:$HOME/.bin:/usr/games"
 export LD_LIBRARY_PATH="/usr/local/lib"
 export PAGER=less

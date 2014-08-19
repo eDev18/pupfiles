@@ -1,8 +1,6 @@
 class desktop::apps {
-    include desktop::apps::beets
     include desktop::apps::flashplugin
     include desktop::apps::hsetroot
-    include desktop::apps::irssi
     include desktop::apps::java
     include desktop::apps::meld
     include desktop::apps::redshift
@@ -11,12 +9,10 @@ class desktop::apps {
 
     package{'archey':}
     package{'cmatrix':}
-    package{'evince':}
-    package{'gimp':}
+    package{'xpdf':}
     package{'mirage':} 
     package{'scrot':} 
     package{'skype':} 
-    package{'tty-clock':}
     package{'tree':}
     package{'unzip':}
     package{'zip':}

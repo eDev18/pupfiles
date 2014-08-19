@@ -6,7 +6,7 @@ class console::shutils {
     package { 'mlocate':
         notify => Exec['updatedb']
     }
-    package {'ranger':}
+    package {'nemo':}
 
     # Update mlocate db.
     exec { 'updatedb':

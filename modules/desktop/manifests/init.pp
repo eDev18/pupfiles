@@ -1,7 +1,7 @@
 class desktop (
     $laptop = false,
-    $graphics_drivers = 'nvidia',
-    $browser = 'firefox',
+    $graphics_drivers = 'intel',
+    $browser = 'chromium',
     $apps = true,
     $fonts = true,
     $media = true,

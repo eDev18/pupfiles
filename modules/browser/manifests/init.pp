@@ -1,9 +1,9 @@
 define browser (
-    $browser = 'firefox'
+    $browser = 'chromium'
 ) {
     case $browser {
-        'firefox': {
-            include browser::firefox
+        'chromium': {
+            include browser::chromium
         }
     }
 }
