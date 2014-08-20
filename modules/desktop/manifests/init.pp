@@ -14,7 +14,7 @@ class desktop (
             include desktop::graphics::nvidia
         }
         'intel': {
-            include desktop::graphics::intel
+            #include desktop::graphics::intel
         }
     }
     if $browser {
