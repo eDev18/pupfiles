@@ -9,8 +9,6 @@ out_to_x no
 update_interval 0.75
 
 TEXT
-# MPD
-$if_mpd_playing ^fg(\#fffff)${if_match "${mpd_status}" == "Playing"}^ca(1, ncmpcpp pause) æ ^ca()$endif${if_match "${mpd_status}" == "Paused"}^ca(1, ncmpcpp play) ç ^ca()$endif$mpd_artist - $mpd_title $endif\
 # Gmail
 #^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/left_triangle.xbm)^bg(\#d64937)^fg(\#ffffff) Ð ${exec sh ./gmail_count } ^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/right_triangle.xbm)\
 ^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/left_triangle.xbm)^bg(\#d64937)^fg(\#ffffff) Ð ${exec sh ./down_count } ^bg(\#1d1f21)^fg(\#d64937)^i($HOME/.config/2bwm/panel/icons/right_triangle.xbm)\
