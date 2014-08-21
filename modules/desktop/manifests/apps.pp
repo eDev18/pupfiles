@@ -7,6 +7,7 @@ class desktop::apps {
     include desktop::apps::tex
     include desktop::apps::vim
 
+    package{'xbindkeys':}
     package{'archey':}
     package{'cmatrix':}
     package{'xpdf':}
