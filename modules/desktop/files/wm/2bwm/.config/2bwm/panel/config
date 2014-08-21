@@ -6,7 +6,7 @@ panel1width=`printf "%.0f" $(echo "scale=5; (40.572916*$screenwidth)/100" | bc)`
 panel2width=`printf "%.0f" $(echo "scale=5; (15.41600*$screenwidth)/100" | bc)`
 panel3width=`printf "%.0f" $(echo "scale=5; (39.10416*$screenwidth)/100" | bc)`
 panel4width=`printf "%.0f" $(echo "scale=5; (4.80625*$screenwidth)/100" | bc)`
-panel2slavewidth=`printf "%.0f" $(echo "scale=5; (8.33333*$screenwidth)/100" | bc)`
+panel2slavewidth=`printf "%.0f" $(echo "scale=5; (10*$screenwidth)/100" | bc)`
 panel2xoffset=$panel1width
 panel3xoffset=$(($panel2xoffset + $panel2width))
 panel4xoffset=$(($panel3xoffset + $panel3width))
