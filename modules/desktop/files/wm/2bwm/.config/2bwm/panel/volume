@@ -26,6 +26,6 @@ do
 		fi
 	fi
 	
-	echo "$tbg$tfg$lt$fg$bg$volicon $vol"
+	echo "$tbg$tfg$lt$fg$bg$volicon $vol "
         sleep 1 
 done
