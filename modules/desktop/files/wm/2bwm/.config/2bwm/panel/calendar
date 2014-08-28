@@ -4,7 +4,7 @@ source $(dirname $0)/config
 
 while true
 do
-	clock=`date +"%a %d %b %H:%M"`
+	clock=`date +"%a %d %b %-l:%M"`
   	echo "$ctbg$ctfg$lwst$cbg$cfg É $clock $tbg$tfg$rt"
 	(cal)
 	sleep 1
