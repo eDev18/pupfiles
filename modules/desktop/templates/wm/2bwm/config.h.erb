@@ -117,7 +117,7 @@ static key keys[] = {
     // Full screen window without borders
     {  MOD ,              XK_x,         maximize,          {.i=0}},
     //Full screen window without borders overiding offsets
-    {  MOD |SHIFT ,       XK_x,          maximize,          {.i=1}},
+    {  MOD ,       XK_f,          maximize,          {.i=1}},
     // Maximize vertically
     {  MOD ,              XK_m,          maxvert_hor,       {.i=1}},
     // Maximize horizontally
@@ -157,7 +157,7 @@ static key keys[] = {
     // Make the window appear always on top
     {  MOD,               XK_t,          always_on_top,     {.i=0}},
     // Make the window stay on all workspaces
-    {  MOD ,              XK_f,          fix,               {.i=0}},
+    {  MOD | SHIFT,              XK_x,          fix,               {.i=0}},
     // Move the cursor
     {  MOD ,              XK_Up,         cursor_move,       {.i=4}},
     {  MOD ,              XK_Down,       cursor_move,       {.i=5}},
